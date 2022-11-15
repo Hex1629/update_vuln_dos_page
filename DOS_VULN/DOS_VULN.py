@@ -12,10 +12,12 @@ def download_file2(url, local_file_path,type):
                 with open(local_file_path, 'w') as local_file:
                      local_file.write(response.text)
                      print(f"{url} TO {local_file_path} WRITING FILES WITH W MODE . . .")
+                     time.sleep(1)
             else:
                 with open(local_file_path, 'wb') as local_file:
                      local_file.write(response.text)
                      print(f"{url} TO {local_file_path} WRITING FILES WITH WB MODE . . .")
+                     time.sleep(1)
     except requests.exceptions:
         print("error . . .")
 download_file("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_github_of_dos.txt")
@@ -33,7 +35,7 @@ def loader_update():
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/GUI.py","GUI.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_of_dos.txt","w")
     print("DONE UPDATE NEW!! AND OPEN AGAIN!!")
-    time.sleep(1)
+    time.sleep(2)
     exit()
 
 update_auto_file = open("ETC\\update\\check_update.txt","r")
