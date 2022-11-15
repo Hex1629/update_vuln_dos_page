@@ -12,13 +12,32 @@ def download_file2(url, local_file_path,type):
                 with open(local_file_path, 'w') as local_file:
                     local_file.write(response.text)
             else:
-                print("error write pls wait. . . .")
+                print(f"{local_file_path} error write pls wait . . . .")
+                while True:
+                    response2 = requests.get(url=url)
+                    if response2.status_code == 200:
+                        if " " == response2.text or "" == response2.text or "  " == response2.text:
+                            with open(local_file_path, 'w') as local_file2:
+                                local_file2.write(response2.text)
+                                continue
+                        else:
+                            print(f"{local_file_path} error write pls wait . . . .")
         else:
             if " " == response.text or "" == response.text or "  " == response.text:
                 with open(local_file_path, 'wb') as local_file:
                     local_file.write(response.text)
             else:
-                print("error write pls wait. . . .")
+                print(f"{local_file_path} error write pls wait . . . .")
+                while True:
+                    response2 = requests.get(url=url)
+                    if response2.status_code == 200:
+                        if " " == response2.text or "" == response2.text or "  " == response2.text:
+                            with open(local_file_path, 'wb') as local_file2:
+                                local_file2.write(response2.text)
+                                continue
+                        else:
+                            print(f"{local_file_path} error write pls wait . . . .")
+
 download_file("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_github_of_dos.txt")
 read_as_update = open("ETC\\update\\ver_github_of_dos.txt","r")
 data_update = read_as_update.read()
@@ -43,6 +62,11 @@ if True == update_patch:
     loader_update()
 else:
     print("NOT UPDATE . . .")
+    data_up = input("Y or N to check?")
+    if "y" == data_up:
+        loader_update()
+    else:
+        print("skip . . .")
 prefix = find_prefix("GET PREFIX NOW . . .")
 banner()
 while True:
