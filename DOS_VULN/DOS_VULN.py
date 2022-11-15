@@ -43,7 +43,7 @@ if True == update_patch:
 else:
     print("NOT UPDATE . . .")
     data_up = input("Y or N to check?")
-    if "y" == data_up or "y" == data_up or "yes" == data_up or "YES" == data_up:
+    if "y" == data_up or "Y" == data_up or "yes" == data_up or "YES" == data_up  or "yES" == data_up or "yEs" == data_up  or "yeS" == data_up or "YEs" == data_up or "Yes" == data_up:
         loader_update()
     else:
         print("skip . . .")
