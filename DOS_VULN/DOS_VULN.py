@@ -42,8 +42,8 @@ update_auto_file = open("ETC\\update\\check_update.txt","r")
 UAF = update_auto_file.read()
 update_auto_file.close()
 
-if "False" in UAF:
-    if True == update_patch:
+if "True" in UAF:
+    if False == update_patch:
         print("FOUND NEW UPDATE . . .")
         print(f"VERSION OF DOS YOU:{up_file}")
         print(F"VERSION OF DOS NOW:{data_update}")
