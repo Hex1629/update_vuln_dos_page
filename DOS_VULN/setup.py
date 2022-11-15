@@ -5,7 +5,7 @@ SETUP CNC OR CONTROL PANEL . . .
 2] UPDATE CHECK (COMING SOON)
 """)
 prefix_get = input("prefix:")
-pre_import = open("ETC\\\prefix.txt",'w')
+pre_import = open("ETC\\prefix.txt",'w')
 pre_import.write(str(prefix_get))
 pre_import.close()
 
