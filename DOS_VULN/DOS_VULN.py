@@ -47,7 +47,13 @@ if "True" in UAF:
         print("FOUND NEW UPDATE . . .")
         print(f"VERSION OF DOS YOU:{up_file}")
         print(F"VERSION OF DOS NOW:{data_update}")
-        loader_update()
+        if up_file == data_update:
+            if data_update == up_file:
+                print("DONE PATCH . . .")
+            else:
+                loader_update()
+        else:
+            loader_update()
 
 prefix = find_prefix("GET PREFIX NOW . . .")
 banner()
