@@ -4,10 +4,10 @@ def find_update(ver):
     data_update = data.read()
     data.close()
     for x2 in data_update:
-        if x2 != ver:
-            return True
-        else:
+        if x2 == ver:
             return False
+        else:
+            return True
 
 def get_update(etc):
     data = open('ETC\\update\\ver_of_dos.txt',"r")
