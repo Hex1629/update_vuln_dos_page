@@ -20,5 +20,5 @@ def download_file(url, local_file_path):
 
     response = requests.get(url=url)
     if response.status_code == 200:
-        with open(local_file_path, 'wb') as local_file:
-            local_file.write(response.text)
+        with open(local_file_path, 'w') as local_file:
+            local_file.write(str(response.text))
