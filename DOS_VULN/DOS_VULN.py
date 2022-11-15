@@ -5,52 +5,42 @@ from ETC.prefix_find import *
 from command import *
 from ETC.update.check_update import *
 def download_file2(url, local_file_path,type):
-    response = requests.get(url=url)
-    if response.status_code == 200:
-        if "w" in type:
-            if " " == response.text or "" == response.text or "  " == response.text:
-                with open(local_file_path, 'w') as local_file:
-                    local_file.write(response.text)
-            else:
-                print(f"{local_file_path} error write pls wait . . . .")
-                while True:
-                    response2 = requests.get(url=url)
-                    if response2.status_code == 200:
-                        if " " == response2.text or "" == response2.text or "  " == response2.text:
-                            with open(local_file_path, 'w') as local_file2:
-                                local_file2.write(response2.text)
-                                continue
-                        else:
-                            print(f"{local_file_path} error write pls wait . . . .")
-        else:
-            if " " == response.text or "" == response.text or "  " == response.text:
-                with open(local_file_path, 'wb') as local_file:
-                    local_file.write(response.text)
-            else:
-                print(f"{local_file_path} error write pls wait . . . .")
-                while True:
-                    response2 = requests.get(url=url)
-                    if response2.status_code == 200:
-                        if " " == response2.text or "" == response2.text or "  " == response2.text:
-                            with open(local_file_path, 'wb') as local_file2:
-                                local_file2.write(response2.text)
-                                continue
-                        else:
-                            print(f"{local_file_path} error write pls wait . . . .")
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            if "w" in type:
+                print(response.text)
+                print(len(response.text))
+                if 0 == len(response.text):
+                    with open(local_file_path, 'w') as local_file:
+                        local_file.write(response.text)
+                else:
+                    print(f"{local_file_path} error write pls wait . . . .")
+                    while True:
+                        response2 = requests.get(url)
+                        if response2.status_code == 200:
+                            if 0 == len(response.text):
+                                with open(local_file_path, 'w') as local_file2:
+                                    local_file2.write(response2.text)
+                                    continue
+                            else:
+                                print(f"{local_file_path} error write pls wait . . . .")
+    except requests.exceptions:
+        print("error . . .")
 
-download_file("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_github_of_dos.txt")
-read_as_update = open("ETC\\update\\ver_github_of_dos.txt","r")
+download_file("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\\\update\\\\ver_github_of_dos.txt")
+read_as_update = open("ETC\\\\update\\\\ver_github_of_dos.txt","r")
 data_update = read_as_update.read()
 read_as_update.close()
 up_file = get_update("get now . . .")
 update_patch = find_update(data_update)
 def loader_update():
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/setup.py","setup.py","w")
-    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/update/check_update.py","ETC\\update\\check_update.py","w")
-    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_of_dos.txt","w")
+    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/update/check_update.py","ETC\\\\update\\\\check_update.py","w")
+    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\\\update\\\\ver_of_dos.txt","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/command.py","command.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/DOS_VULN.py","DOS_VULN.py","w")
-    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/prefix_find.py","ETC\\prefix_find.py","w")
+    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/prefix_find.py","ETC\\\\prefix_find.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/GUI.py","GUI.py","w")
     print("DONE UPDATE NEW!! AND OPEN AGAIN!!")
     time.sleep(2)
