@@ -33,20 +33,20 @@ def loader_update():
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/prefix_find.py","ETC\\prefix_find.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/GUI.py","GUI.py","w")
     print("DONE UPDATE NEW!! AND OPEN AGAIN!!")
-    time.sleep(2)
+    time.sleep(1)
     exit()
-if True == update_patch:
-    print("FOUND NEW UPDATE . . .")
-    print(f"VERSION OF DOS YOU:{up_file}")
-    print(F"VERSION OF DOS NOW:{data_update}")
-    loader_update()
-else:
-    print("NOT UPDATE . . .")
-    data_up = input("Y or N to check?")
-    if "y" == data_up or "Y" == data_up or "yes" == data_up or "YES" == data_up  or "yES" == data_up or "yEs" == data_up  or "yeS" == data_up or "YEs" == data_up or "Yes" == data_up  or "YeS" == data_up:
+
+update_auto_file = open("ETC\\update\\check_update.txt","r")
+UAF = update_auto_file.read()
+update_auto_file.close()
+
+if "True" in UAF:
+    if True == update_patch:
+        print("FOUND NEW UPDATE . . .")
+        print(f"VERSION OF DOS YOU:{up_file}")
+        print(F"VERSION OF DOS NOW:{data_update}")
         loader_update()
-    else:
-        print("skip . . .")
+
 prefix = find_prefix("GET PREFIX NOW . . .")
 banner()
 while True:
