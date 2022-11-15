@@ -4,7 +4,7 @@ def find_update(ver):
     data_update = data.read()
     data.close()
     for x2 in data_update:
-        if x2 == ver:
+        if x2 != ver:
             return False
         else:
             return True
