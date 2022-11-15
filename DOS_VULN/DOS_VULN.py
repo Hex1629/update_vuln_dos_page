@@ -27,11 +27,11 @@ update_patch = find_update(data_update)
 def loader_update():
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/setup.py","setup.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/update/check_update.py","ETC\\update\\check_update.py","w")
-    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_of_dos.txt","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/command.py","command.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/DOS_VULN.py","DOS_VULN.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/prefix_find.py","ETC\\prefix_find.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/GUI.py","GUI.py","w")
+    download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_of_dos.txt","w")
     print("DONE UPDATE NEW!! AND OPEN AGAIN!!")
     time.sleep(1)
     exit()
@@ -40,7 +40,7 @@ update_auto_file = open("ETC\\update\\check_update.txt","r")
 UAF = update_auto_file.read()
 update_auto_file.close()
 
-if "True" in UAF:
+if "False" in UAF:
     if True == update_patch:
         print("FOUND NEW UPDATE . . .")
         print(f"VERSION OF DOS YOU:{up_file}")

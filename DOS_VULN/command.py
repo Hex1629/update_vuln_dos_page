@@ -190,6 +190,12 @@ def command_attack(command):
         else:
             os.system("clear")
         banner()
+    
+    elif f"{prefix}prefix_custom" in command:
+        prefix_get = input(F"{Fore.BLUE}prefix:{Fore.RESET}")
+        pre_import = open("ETC\\prefix.txt",'w')
+        pre_import.write(str(prefix_get))
+        pre_import.close()
 
     elif f"{prefix}nov-5-2022" in command:
         if "Windows" in platform.system():
