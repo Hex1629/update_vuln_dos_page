@@ -1,6 +1,6 @@
 import requests
 def find_update(ver):
-    data = open('ETC\\update\\ver_of_dos.txt',"r")
+    data = open('ETC\\\\update\\\\ver_of_dos.txt',"r")
     data_update = data.read()
     data.close()
     for x2 in data_update:
@@ -10,7 +10,7 @@ def find_update(ver):
             return False
 
 def get_update(etc):
-    data = open('ETC\\update\\ver_of_dos.txt',"r")
+    data = open('ETC\\\\update\\\\ver_of_dos.txt',"r")
     data_update = data.read()
     data.close()
     etc = ""
