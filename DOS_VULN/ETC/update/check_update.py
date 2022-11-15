@@ -1,6 +1,6 @@
 import requests
 def find_update(ver):
-    data = open('ETC\\\\update\\\\ver_of_dos.txt',"r")
+    data = open('ETC\\update\\ver_of_dos.txt',"r")
     data_update = data.read()
     data.close()
     for x2 in data_update:
@@ -10,7 +10,7 @@ def find_update(ver):
             return False
 
 def get_update(etc):
-    data = open('ETC\\\\update\\\\ver_of_dos.txt',"r")
+    data = open('ETC\\update\\ver_of_dos.txt',"r")
     data_update = data.read()
     data.close()
     etc = ""
@@ -21,5 +21,4 @@ def download_file(url, local_file_path):
     response = requests.get(url=url)
     if response.status_code == 200:
         with open(local_file_path, 'wb') as local_file:
-            for chunk in response.iter_content(chunk_size=128):
-                local_file.write(chunk)
+            local_file.write(response.text)
