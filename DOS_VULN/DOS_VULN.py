@@ -11,9 +11,11 @@ def download_file2(url, local_file_path,type):
             if "w" in type:
                 with open(local_file_path, 'w') as local_file:
                      local_file.write(response.text)
+                     print(f"{url} TO {local_file_path} WRITING FILES WITH W MODE . . .")
             else:
                 with open(local_file_path, 'wb') as local_file:
                      local_file.write(response.text)
+                     print(f"{url} TO {local_file_path} WRITING FILES WITH WB MODE . . .")
     except requests.exceptions:
         print("error . . .")
 download_file("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_github_of_dos.txt")
@@ -41,7 +43,7 @@ if True == update_patch:
 else:
     print("NOT UPDATE . . .")
     data_up = input("Y or N to check?")
-    if "y" == data_up:
+    if "y" == data_up orb "y" == data_up or "yes" == data_up or "YES" == data_up:
         loader_update()
     else:
         print("skip . . .")
