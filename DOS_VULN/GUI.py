@@ -25,7 +25,7 @@ def banner():
 |                                                        |
 *--------------------------------------------------------*
 
-WELCOME TO VER.{data_update} . . . .
+WELCOME TO VER.{data_update}
 {Fore.RESET}""")
 
 def method():
