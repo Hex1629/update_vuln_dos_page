@@ -1,5 +1,4 @@
 UPDATE NEW!!!!
-V 0.5.1.
 
 FIX BUG AND NEW COMMAND
 
@@ -9,5 +8,8 @@ COMMAND ---->
 
 method list?
 get,post,put,patch,head,delete,option
+
+FIX BUG NEW --->
+download_file3("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/NOTE_UPDATE.txt","NOTE_PATCH.txt","w")
 
 GOOD LUCK TOT . . .
