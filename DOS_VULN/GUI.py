@@ -24,10 +24,14 @@ def banner():
 def method():
     print(f"""{Fore.GREEN}
 #----------------------------- method  VNLN ---------------------------#
-| [+] {prefix}nov-5-2022 <mode> <url> <time> <mod> <type>
+| [+] {prefix}nov-5-2022 <url> <time> <mod> <type>
+#----------------------------------------------------------------------#
+
+# TOOL OTHER ----------------------------------------------------------#
+| [+] {prefix}ping <url> <get,post,put,patch,head,option,delete> <time>
 #----------------------------------------------------------------------#
 {Fore.YELLOW}
-@- MODE AND TYPE ------------------------------------------------
+@- MODE AND TYPE VULN --------------------------------------------
 | [>_] LIST . . . .
 |  |
 |  |_ [MOD]: re_user_spf user_spf re_ssl_user_spf user_normal
