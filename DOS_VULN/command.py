@@ -6,6 +6,9 @@ from fake_useragent import FakeUserAgent
 from GUI import *
 from colorama import Fore,Back,init
 from ETC.update.check_update import *
+from ETC.prefix_find import *
+
+prefix = find_prefix("GET PREFIX NOW . . .")
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
