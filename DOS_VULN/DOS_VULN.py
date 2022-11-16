@@ -26,6 +26,7 @@ read_as_update.close()
 up_file = get_update("get now . . .")
 update_patch = find_update(data_update)
 def loader_update():
+    download_file3("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/NOTE_UPDATE.txt","NOTE_PATCH.txt","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/setup.py","setup.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/ETC/update/check_update.py","ETC\\update\\check_update.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/command.py","command.py","w")
@@ -34,6 +35,7 @@ def loader_update():
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/GUI.py","GUI.py","w")
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_of_dos.txt","w")
     print("DONE UPDATE NEW!! AND OPEN AGAIN!!")
+    time.sleep(2)
     time.sleep(2)
     exit()
 
