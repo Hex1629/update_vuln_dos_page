@@ -1,0 +1,13 @@
+UPDATE NEW!!!!
+V 0.5.1.
+
+FIX BUG AND NEW COMMAND
+
+COMMAND ---->
+!NOTE! {prefix} <--- prefix you setup . . .
+{prefix}ping <url> <METHOD> <time>
+
+method list?
+get,post,put,patch,head,delete,option
+
+GOOD LUCK TOT . . .
