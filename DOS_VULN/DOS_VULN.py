@@ -36,6 +36,7 @@ def loader_update():
     download_file2("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/ver_of_dos.txt","ETC\\update\\ver_of_dos.txt","w")
     print("DONE UPDATE NEW!! AND OPEN AGAIN!!")
     time.sleep(2)
+    start_app("NOTE_PATCH.txt")
     time.sleep(2)
     exit()
 
