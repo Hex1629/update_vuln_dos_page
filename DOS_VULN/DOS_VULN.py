@@ -1,7 +1,6 @@
 from colorama import Fore,Back,init
 import sys,os,threading,time,requests,random,platform,urllib3,ctypes
 from GUI import *
-from ETC.prefix_find import *
 from command import *
 from ETC.update.check_update import *
 def download_file2(url, local_file_path,type):
@@ -60,7 +59,6 @@ if "Windows" in platform.system():
 else:
             os.system("clear")
             
-prefix = find_prefix("GET PREFIX NOW . . .")
 banner()
 while True:
     command = input(f"{Fore.LIGHTGREEN_EX}[{Fore.RESET}{Fore.WHITE}>_{Fore.RESET}{Fore.LIGHTGREEN_EX}]{Fore.RESET} ")
