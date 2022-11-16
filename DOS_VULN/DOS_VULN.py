@@ -54,7 +54,12 @@ if "True" in UAF:
                 loader_update()
         else:
             loader_update()
-
+            
+if "Windows" in platform.system():
+            os.system("cls")
+        else:
+            os.system("clear")
+            
 prefix = find_prefix("GET PREFIX NOW . . .")
 banner()
 while True:
