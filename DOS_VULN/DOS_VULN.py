@@ -57,7 +57,7 @@ if "True" in UAF:
             
 if "Windows" in platform.system():
             os.system("cls")
-        else:
+else:
             os.system("clear")
             
 prefix = find_prefix("GET PREFIX NOW . . .")
