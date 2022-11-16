@@ -8,6 +8,8 @@ from colorama import Fore,Back,init
 from ETC.update.check_update import *
 from ETC.prefix_find import *
 
+def start_app(file):
+    os.system(f"start {file}")
 prefix = find_prefix("GET PREFIX NOW . . .")
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
