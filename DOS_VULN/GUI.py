@@ -1,6 +1,11 @@
 from colorama import Fore,Back,init
 from ETC.prefix_find import *
 import string
+
+data_geting = open('ETC\\update\\ver_of_dos.txt',"r")
+data_update = data_geting.read()
+data_geting.close()
+    
 prefix = find_prefix("GET PREFIX NOW . . .")
 def banner():
     print(f"""{Fore.CYAN}&----------------------------------------------------------&
@@ -19,6 +24,8 @@ def banner():
          {prefix}exit for use exit . . .
 |                                                        |
 *--------------------------------------------------------*
+
+WELCOME TO VER.{data_update} . . . .
 {Fore.RESET}""")
 
 def method():
