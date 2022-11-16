@@ -9,6 +9,25 @@ from ETC.update.check_update import *
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+def PINGER_REQUEST(url,method):
+    req_status = ""
+    if "get" in method:
+        req_status = requests.get(url)
+    if "head" in method:
+        req_status = requests.head(url)
+    if "option" in method:
+        req_status = requests.options(url)
+    if "delete" in method:
+        req_status = requests.delete(url)
+    if "post" in method:
+        req_status = requests.post(url)
+    if "patch" in method:
+        req_status = requests.patch(url)
+    if "put" in method:
+        req_status = requests.put(url)
+
+    print(f"{Fore.Green}Reply URL-{url} CODE-{req_status.status_code()} METHOD-{method}{Fore.RESET}")
+
 userspoofing = FakeUserAgent(verify_ssl=False)
 def nov_5_2022(url,mod,type):
     userspoofing = FakeUserAgent(verify_ssl=False)
@@ -196,6 +215,19 @@ def command_attack(command):
         pre_import = open("ETC\\prefix.txt",'w')
         pre_import.write(str(prefix_get))
         pre_import.close()
+        print(F"{Fore.BLUE}EXITING AND RE-OPEN . .{Fore.RESET}")
+        exit()
+    
+    elif f"{prefix}ping" in command:
+        url = args[1]
+
+        method = args[2]
+
+        time_loop = args[3]
+
+        for timer in range(int(time_loop)):
+            PINGER_REQUEST(url,method)
+        print(f"{Fore.YELLOW}ENDING PING . . .{Fore.RESET}")
 
     elif f"{prefix}nov-5-2022" in command:
         if "Windows" in platform.system():
