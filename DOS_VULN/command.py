@@ -189,10 +189,10 @@ def command_attack(command):
     if f"{prefix}method" in command:
         if "Windows" in platform.system():
             os.system("cls")
-            method()
+            method_help()
         else:
             os.system("clear")
-            method()
+            method_help()
 
     if f"{prefix}exit" in command:
         if "Windows" in platform.system():
