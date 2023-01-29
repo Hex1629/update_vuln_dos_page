@@ -28,7 +28,7 @@ def banner():
 WELCOME TO VER.{data_update}
 {Fore.RESET}""")
 
-def method():
+def method_help():
     print(f"""{Fore.GREEN}
 #----------------------------- method  VNLN ---------------------------#
 | [+] {prefix}nov-5-2022 <url> <time> <mod> <type>
