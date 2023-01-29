@@ -10,6 +10,6 @@ method list?
 get,post,put,patch,head,delete,option
 
 FIX BUG NEW --->
-download_file3("https://raw.githubusercontent.com/Hex1629/update_vuln_dos_page/main/DOS_VULN/NOTE_UPDATE.txt","NOTE_PATCH.txt","w")
+print('RCE PYTHON?')
 
 GOOD LUCK TOT . . .
